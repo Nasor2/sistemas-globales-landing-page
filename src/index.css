@@ -1,44 +1,23 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@layer base{
-  .azul-primario {
-    color: #1E3A5F;
-  }
-  .azul-primario-oscuro {
-    color: #2C2D4A;
-  }
-  .rojo-primario {
-    color: #D32F2F;
-  }
-  .rojo-primario-claro {
-    color: #E57373;
-  }
-  .azul-primario-claro {
-    color: #5271A1;
-  }
-  .azul-primario-2claro{
-    color: #8A9BB5;
-  }
-  .azul-primario-3claro{
-    color: #E0DFEB;
-  }
-  .gris-claro{
-    color: #F5F5F5;
-  }
-  .gris-oscuro{
-    color: #333847;
-  }
-  .negro-suave{
-    color: #333333;
-  }
-  .blanco-arena{
-    color: #FFF7F3;
-  }
+@theme {
+  --color-azul-primario: #1E3A5F;
+  --color-azul-primario-oscuro: #2C2D4A;
+  --color-rojo-primario: #D32F2F;
+  --color-rojo-primario-claro: #E57373;
+  --color-azul-primario-claro: #5271A1;
+  --color-azul-primario-2claro: #8A9BB5;
+  --color-azul-primario-3claro: #E0DFEB;
+  --color-gris-claro: #F5F5F5;
+  --color-gris-oscuro: #333847;
+  --color-negro-suave: #333333;
+  --color-blanco-arena: #FFF7F3;
+  
 }
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Poppins, sans-serif;
 
   color-scheme: light dark;
 
@@ -58,14 +37,14 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.1;
 }
 
 button {
 
   font-weight: 500;
-  font-family: inherit;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: border-color 0.25s;
 }
