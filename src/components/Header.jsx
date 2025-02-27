@@ -5,7 +5,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg py-4 fixed w-full top-0 z-50">
+    <header className="bg-white py-4 fixed w-full top-0 z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -17,26 +17,26 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
             <div className="flex space-x-10 mr-10">
-              <a href="#servicios" className="text-azul-primario hover:text-rojo-primario font-semibold text-lg transition duration-300 relative group">
+              <a href="#servicios" className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-lg transition duration-300 relative group">
                 Servicios
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
-              <a href="#nosotros" className="text-azul-primario hover:text-rojo-primario font-semibold text-lg transition duration-300 relative group">
+              <a href="#nosotros" className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-lg transition duration-300 relative group">
                 Nosotros
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
-              <a href="#ubicaciones" className="text-azul-primario hover:text-rojo-primario font-semibold text-lg transition duration-300 relative group">
+              <a href="#ubicaciones" className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-lg transition duration-300 relative group">
                 Ubicaciones
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
-              <a href="#contacto" className="text-azul-primario hover:text-rojo-primario font-semibold text-lg transition duration-300 relative group">
+              <a href="#contacto" className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-lg transition duration-300 relative group">
                 Contacto
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
             </div>
             <a 
               href="#cotizar" 
-              className="bg-rojo-primario text-white px-5 py-3 rounded-full font-semibold text-lg hover:bg-[#c71f1f] transition duration-300 shadow-lg transform hover:scale-105"
+              className="bg-rojo-primario text-white px-5 py-3 rounded-full font-normal text-lg hover:bg-[#c71f1f] transition duration-300 shadow-lg transform hover:scale-105"
             >
               Cotiza ahora
             </a>
