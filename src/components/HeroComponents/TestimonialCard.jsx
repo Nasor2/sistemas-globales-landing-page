@@ -4,19 +4,29 @@ const TestimonialCard = ({ testimonial }) => {
   const { name, role, company, avatar, quote } = testimonial;
   
   return (
-    <div className="bg-white/80 rounded-[10px] max-h-100 border-1 shadow-lg p-3 max-w-xs">
-      <div className="flex items-center mb-2">
-        <img 
-          src={avatar} 
-          alt={name}
-          className="w-12 h-12 rounded-full mr-3 object-cover object-center"
-        />
+    <div className="bg-white/80 backdrop-blur-sm rounded-lg border-l-4 border border-azul-primario shadow-lg p-3 w-64 transform hover:scale-105 transition-all duration-300">
+      <div className="flex items-center gap-2 mb-2">
+        <div className="relative">
+          <img 
+            src={avatar || "/api/placeholder/36/36"} 
+            alt={name}
+            className="w-9 h-9 rounded-full object-cover object-center ring-2 ring-rojo-primario"
+          />
+          
+        </div>
         <div>
-          <h4 className="font-semibold text-sm">{name}</h4>
-          <p className="text-xs text-gray-600">{role}</p>
+          <h4 className="font-bold text-sm text-azul-primario">{name}</h4>
+          <p className="text-xs font-medium text-gray-600">{role}</p>
         </div>
       </div>
-      <p className="text-sm">{quote}</p>
+      <div className="relative pl-3 border-l border-gray-200">
+        <p className="text-xs leading-tight text-gray-800 italic">{quote}</p>
+      </div>
+      {company && (
+        <div className="flex justify-end mt-1">
+          <span className="text-xs bg-rojo-primario/10 text-rojo-primario px-2 py-0.5 rounded-full font-medium">{company}</span>
+        </div>
+      )}
     </div>
   );
 };
