@@ -6,20 +6,20 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white py-4 fixed w-full top-0 z-50">
-      <div className="container mx-auto px-6">
+    <header className="bg-white py-4 w-full top-0 z-50 sticky">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-4">
-            <img src={logo} alt="Sistemas Globales" className="h-18 w-auto" />
-            <h1 className="text-azul-primario text-3xl font-bold tracking-tight">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-4">
+            <img src={logo} alt="Sistemas Globales" className="h-8 sm:h-12 w-auto" />
+            <h1 className="text-azul-primario text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight">
               Sistemas Globales
             </h1>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
-            <div className="flex space-x-10 mr-10">
+            <div className="flex space-x-4 lg:space-x-10 mr-4 lg:mr-10">
               <a
                 href="#servicios"
                 className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-lg transition duration-300 relative group"

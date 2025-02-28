@@ -8,16 +8,19 @@ import AboutUs from './pages/AboutUs';
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Header />
-              <Hero />
-            </>
-          } />
-          <Route path="/about" element={<AboutUs />} />
-        </Routes>
+      <div className="w-full overflow-x-hidden">
+        <main className="w-full">
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Header />
+                <Hero />
+              </>
+            } />
+            <Route path="/about" element={<AboutUs />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </Router>
   );

@@ -5,9 +5,9 @@ import { heroImages } from "../../data/imageData";
 import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
-    <section className="h-screen min-w-screen mx-auto bg-white py-12 lg:py-30">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+    <section className="min-h-screen w-full bg-white py-4 lg:py-6 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
           <div className="w-full lg:w-4/12 z-10 pb-30">
             <div className="mb-3">
               <span className="inline-flex items-center text-azul-primario font-medium text-lg bg-azul-primario/10 px-4 py-1 rounded-full">
@@ -42,7 +42,7 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="w-full lg:w-8/12 relative justify-between flex">
+          <div className="w-full lg:w-7/12 relative justify-between flex">
             <div className="relative justify-between">
               <div className="relative justify-between">
                 <div
@@ -60,7 +60,7 @@ const Hero = () => {
 
                   <img
                     data-layer="Rectangle 4"
-                    className="Rectangle4 w-[473px] h-[673px] rounded-[250px] object-cover object-center transition-transform duration-700 hover:scale-105 shadow-inner"
+                    className="Rectangle4 w-[473px] h-[673px] rounded-[250px] object-cover object-center transition-transform duration-700 hover:scale-105"
                     src={heroImages.mainImage.mainImage}
                   />
                 </div>
