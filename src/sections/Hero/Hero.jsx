@@ -54,22 +54,33 @@ const Hero = () => {
                     src={heroImages.mainImage.mainImage}
                   />
                 </div>
+                <div className="absolute -left-6 md:-left-16 top-1/7 z-20">
+                  <TestimonialCard testimonial={testimonials[0]} />
+                </div>
+
+                <div className="absolute -right-6 md:-right-16 top-2/4 z-20">
+                  <TestimonialCard testimonial={testimonials[1]} />
+                </div>
+
+                <div className="absolute bottom-1 right-2/4 z-20">
+                  <TestimonialCard testimonial={testimonials[2]} />
+                </div>
               </div>
             </div>
             <div className="hidden lg:flex flex-col gap-4 h-full justify-between">
-  {heroImages.showcaseImages.map((img, index) => (
-    <div
-      key={index}
-      className="w-60 h-60 rounded-xl overflow-hidden shadow-md border border-black bg-black/20"
-    >
-      <img
-        src={img}
-        alt={`Digital billboard example ${index + 1}`}
-        className="w-full h-full object-cover object-center"
-      />
-    </div>
-  ))}
-</div>
+              {heroImages.showcaseImages.map((img, index) => (
+                <div
+                  key={index}
+                  className="w-60 h-60 rounded-xl overflow-hidden shadow-md border border-black bg-black/20"
+                >
+                  <img
+                    src={img}
+                    alt={`Digital billboard example ${index + 1}`}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

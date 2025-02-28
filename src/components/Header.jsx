@@ -36,7 +36,7 @@ const Header = () => {
             </div>
             <a 
               href="#cotizar" 
-              className="bg-rojo-primario text-white px-5 py-3 rounded-full font-normal text-lg hover:bg-[#c71f1f] transition duration-300 shadow-lg transform hover:scale-105"
+              className="bg-rojo-primario text-white px-5 py-2 rounded-full font-normal text-lg hover:bg-[#c71f1f] transition duration-300 shadow-lg transform "
             >
               Cotiza ahora
             </a>
@@ -98,7 +98,7 @@ const Header = () => {
               </a>
               <a 
                 href="#cotizar" 
-                className="bg-rojo-primario text-white py-3 px-6 rounded-full font-semibold text-lg text-center hover:bg-[#c71f1f] transition duration-300 shadow-md mt-2 transform hover:scale-105"
+                className="bg-rojo-primario text-white py-2 px-6 rounded-full font-semibold text-lg text-center hover:bg-[#c71f1f] transition duration-300 shadow-md mt-2 transform hover:scale-105"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Cotiza ahora
