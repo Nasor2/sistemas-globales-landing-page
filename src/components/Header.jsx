@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/icons/logo.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,10 +10,10 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-4">
+          <Link to="/" className="flex items-center space-x-4">
             <img src={logo} alt="Sistemas Globales" className="h-18 w-auto" />
             <h1 className="text-azul-primario text-3xl font-bold tracking-tight">Sistemas Globales</h1>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
@@ -21,8 +22,8 @@ const Header = () => {
                 Servicios
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
-              <a href="#nosotros" className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-lg transition duration-300 relative group">
-                Nosotros
+              <a className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-lg transition duration-300 relative group">
+                <Link to="/about">Nosotros</Link>
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
               <a href="#ubicaciones" className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-lg transition duration-300 relative group">

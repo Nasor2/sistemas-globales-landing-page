@@ -1,18 +1,26 @@
-import React from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-import Hero from './sections/Hero/Hero.jsx'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header.jsx';
+import Hero from './sections/Hero/Hero.jsx';
+import Footer from './components/Footer.jsx';
+import AboutUs from './pages/AboutUs';
 
 function App() {
-
   return (
-    <div>
-      <Header />
-      <Hero />
-    </div>
-  )
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Header />
+              <Hero />
+            </>
+          } />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
