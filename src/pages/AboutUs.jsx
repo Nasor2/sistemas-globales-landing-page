@@ -3,13 +3,13 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaEye, FaRocket } from 'react-icons/fa';
 import showcaseImage from '../assets/images/showcase-1.png';
-import { GiTargeting} from "react-icons/gi";
+import { GiTargeting } from "react-icons/gi";
 
 const AboutUs = () => {
     return (
         <div className="min-h-screen flex flex-col">
             <Header />
-            <main className="flex-grow bg-white pt-24">
+            <main className="flex-grow bg-white">
                 <div className="w-screen h-[600px] relative">
                     <div className="w-full h-full left-0 top-0 absolute">
                         <div className="w-full h-full left-0 top-0 absolute">
@@ -42,7 +42,7 @@ const AboutUs = () => {
                     <p className="text-center text-sm w-[761px] mx-auto mt-1" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. id sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id congue sapien.
                     </p>
-                    
+
                     <div className="w-[854.03px] h-[26.74px] text-center text-blanco-arena text-base font-semibold font-['Open Sans'] mx-auto mt-20">Find us on</div>
                     <div className="mt-2 space-x-6 text-center text-blanco-arena">
                         <FaFacebook className="inline-block text-2xl cursor-pointer" />
@@ -72,7 +72,7 @@ const AboutUs = () => {
                             <div className="w-4 h-4 left-[274px] top-1 absolute bg-rojo-primario rounded-full" />
                             <div className="w-4 h-4 left-[275px] top-[280px] absolute bg-rojo-primario rounded-full" />
                         </div>
-                        
+
                         <div className="w-[507px] h-48 left-0 top-[235px] absolute">
                             <div className="w-[473.99px] h-[72px] left-0 top-0 absolute text-[#1e3a5f] text-4xl font-bold font-['Poppins']">Mision.</div>
                             <div className="w-[503px] h-[120px] left-[4px] top-[72px] absolute text-[#1e3a5f] text-xl font-normal font-['Poppins']">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id congue sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id congue sapien.</div>
@@ -106,10 +106,59 @@ const AboutUs = () => {
                             <span className="text-white text-5xl font-bold font-['Poppins']">y</span>
                             <span className="text-[#1e3a5f] text-5xl font-bold font-['Poppins']"> visión</span>
                         </div>
-                        <GiTargeting className='w-[74px] h-[81px] left-[90px] top-[55px] absolute text-azul-primario'/>
+                        <GiTargeting className='w-[74px] h-[81px] left-[90px] top-[55px] absolute text-azul-primario' />
                         <div className="w-[55px] h-[0px] left-[199px] top-[95px] absolute origin-top-left -rotate-90 border-2 border-white"></div>
                     </div>
                 </div>
+
+                <div className="w-full h-[736px] bg-white relative overflow-hidden">
+                    <div className="w-full h-full relative">
+                        {/* Fondo con gradiente */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#3a416f] to-[#141727] z-0" />
+
+                        {/* SVG de arriba y abajo */}
+                        <svg className="absolute top-0 left-0 w-full h-full z-0" viewBox="0 0 1440 736" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                            <path d="M1440 0H0V72.6017C289.125 143.388 502.54 114.689 771 62.619C976.875 22.688 1184.25 6.35265 1440 60.8039V0Z" fill="white" />
+                            <path d="M0 736L1440 736V652.397C1150.88 564.478 937.46 600.124 669 664.796C463.125 714.392 255.75 734.681 0 667.051V736Z" fill="#F8F9FA" />
+                        </svg>
+
+                        {/* Contenido de la sección */}
+                        <div className="relative z-10 flex justify-between items-center w-full h-full px-[5%]">
+                            {/* Texto */}
+                            <div className="max-w-[773px] text-white">
+                                <div className="relative flex items-center space-x-3">
+                                    <span className="text-[#d32f2f] text-[40px] font-medium font-['Poppins'] [text-shadow:_0px_0px_45px_rgb(255_49_49_/_1.00)]">✦</span>
+                                    <h2 className="text-white text-5xl font-bold font-['Poppins']">¿Quiénes somos?</h2>
+                                </div>
+                                <p className="text-2xl text-white/90 mt-4">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id congue sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                                <ul className="mt-6 space-y-3 ml-10">
+                                    <li className="flex items-center space-x-4">
+                                        <img src="https://placehold.co/32x32" alt="icono" className="w-8 h-8" />
+                                        <span className="text-xl text-white/90">Lorem ipsum dolor sit amet.</span>
+                                    </li>
+                                    <li className="flex items-center space-x-4">
+                                        <img src="https://placehold.co/32x32" alt="icono" className="w-8 h-8" />
+                                        <span className="text-xl text-white/90">Curabitur id congue sapien.</span>
+                                    </li>
+                                    <li className="flex items-center space-x-4">
+                                        <img src="https://placehold.co/32x32" alt="icono" className="w-8 h-8" />
+                                        <span className="text-xl text-white/90">Vestibulum dapibus augue.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Imagen */}
+                            <div className="w-[378px] h-[378px] rounded-full border-2 border-[#d32f2f] relative">
+                                <img src="https://placehold.co/338x344" alt="Imagen" className="absolute inset-0 w-[338px] h-[344px] rounded-full object-cover m-auto" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
 
             </main>
         </div>
