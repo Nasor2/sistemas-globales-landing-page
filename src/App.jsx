@@ -4,6 +4,7 @@ import Header from './components/Header.jsx';
 import Hero from './sections/Hero/Hero.jsx';
 import Footer from './components/Footer.jsx';
 import AboutUs from './pages/AboutUs';
+import Testimonials from './sections/Testimonials/Testimonials.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
               <>
                 <Header />
                 <Hero />
+                <Testimonials />
               </>
             } />
             <Route path="/about" element={<AboutUs />} />

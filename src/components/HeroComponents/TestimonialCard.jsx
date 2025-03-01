@@ -4,7 +4,7 @@ const TestimonialCard = ({ testimonial }) => {
   const { name, role, company, avatar, quote } = testimonial;
   
   return (
-    <div className="bg-white/80 backdrop-blur-sm rounded-lg border-l-4 border border-azul-primario shadow-lg p-3 w-64 transform hover:scale-105 transition-all duration-300">
+    <div className="bg-white/80 backdrop-blur-sm rounded-lg border-l-4 border-azul-primario shadow-lg p-3 w-64 transform hover:scale-105 transition-all duration-300">
       <div className="flex items-center gap-2 mb-2">
         <div className="relative">
           <img 
