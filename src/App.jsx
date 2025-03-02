@@ -6,6 +6,7 @@ import Footer from './components/Footer.jsx';
 import AboutUs from './pages/AboutUs';
 import ServicesTop from './sections/SGservices/ServicesTop.jsx';
 import ServicesBelow from './sections/SGservices/ServicesBelow.jsx';
+import ServicesPricing from './sections/SGservices/ServicesPricing.jsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Hero />
               <ServicesTop />
               <ServicesBelow />
+              <ServicesPricing />
             </>
           } />
           <Route path="/about" element={<AboutUs />} />

@@ -60,7 +60,7 @@ const ServicesBelow = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-red-500">Lorem</span>{" "}
-            <span className="text-[#1e2937]">Ipsum</span>
+            <span className="text-azul-primario">Ipsum</span>
           </h2>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
             Lorem ipsum dolor sit amet consectetur adipiscing elit.

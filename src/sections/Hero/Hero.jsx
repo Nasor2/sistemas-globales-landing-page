@@ -15,7 +15,7 @@ const Hero = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl lg:text-5xl font-bold text-azul-primario leading-[60px] mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold   text-azul-primario leading-[60px] mb-6">
               Conquista la ciudad y{" "}
               <span className="text-rojo-primario">dispara tus ventas</span> con
               pantallas digitales
