@@ -1,6 +1,6 @@
 import React from 'react';
 import { values } from '../../data/DataAboutUs'
-import TitleSection from '../../components/AbourComponents/TitleSection';
+import TitleSection from '../../components/AboutComponents/TitleSection';
 
 const textSegments = [
     { text: 'Valores ', color: 'text-azul-primario'},

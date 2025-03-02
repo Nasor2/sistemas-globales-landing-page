@@ -14,31 +14,34 @@ const MisionVision = () => {
                         {/* Elementos superiores */}
                         <div className="absolute top-0 right-15 w-3 md:w-5 h-3 md:h-5 bg-white"></div>
                         <div className="absolute -top-3 md:-top-5 right-15 w-3 md:w-5 h-3 md:h-5 bg-rojo-primario"></div>
-                        <div className="absolute -top-6 md:-top-10 right-10 w-3 md:w-5 h-3 md:h-5 bg-[#1e3a5f]"></div>
+                        <div className="absolute -top-6 md:-top-10 right-12 md:right-10 w-3 md:w-5 h-3 md:h-5 bg-[#1e3a5f]"></div>
 
                         {/* Elementos inferiores*/}
                         <div className="absolute bottom-0 left-15 w-3 md:w-5 h-3 md:h-5 bg-white"></div>
                         <div className="absolute -bottom-3 md:-bottom-5 left-15 w-3 md:w-5 h-3 md:h-5 bg-rojo-primario"></div>
-                        <div className="absolute -bottom-6 md:-bottom-10 left-10 w-3 md:w-5 h-3 md:h-5 bg-[#1e3a5f]"></div>
+                        <div className="absolute -bottom-6 md:-bottom-10 left-12 md:left-10 w-3 md:w-5 h-3 md:h-5 bg-[#1e3a5f]"></div>
 
-                        {/* Ícono */}
-                        <div className="hidden sm:block absolute left-6 sm:left-12 md:left-25 top-1/2 transform -translate-y-1/2">
-                            <GiTargeting className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-azul-primario" />
-                            <div className="absolute top-10 sm:top-12 md:top-15 left-12 sm:left-16 md:left-20 w-10 sm:w-12 md:w-15 origin-top-left -rotate-90 border border-white md:border-2"></div>
+                        {/* Div que agrupa el ícono y título */}
+                        <div className="flex flex-row items-center">
+                            {/* Ícono */}
+                            <div className="hidden sm:block absolute sm:left-20 top-1/2 transform -translate-y-1/2">
+                                <GiTargeting className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-azul-primario" />
+                                <div className="absolute top-10 sm:top-12 md:top-15 left-10 sm:left-17 w-10 sm:w-12 md:w-15 origin-top-left -rotate-90 border border-white md:border-2"></div>
+                            </div>
+
+                            {/* Texto del título */}
+                            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold font-['Poppins'] text-center">
+                                <span className="text-white">Nuestra</span>
+                                <span className="text-[#1e3a5f]"> misión </span>
+                                <span className="text-white">y</span>
+                                <span className="text-[#1e3a5f]"> visión</span>
+                            </h2>
                         </div>
-
-                        {/* Texto del título */}
-                        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold font-['Poppins'] text-center">
-                            <span className="text-white">Nuestra</span>
-                            <span className="text-[#1e3a5f]"> misión </span>
-                            <span className="text-white">y</span>
-                            <span className="text-[#1e3a5f]"> visión</span>
-                        </h2>
                     </div>
                 </div>
             </div>
 
-            <div className="w-full max-w-screen-lg mx-auto px-4 py-8">
+            <div className="w-full max-w-screen-lg mx-auto px-4 py-5">
                 <div className="flex flex-col md:flex-row items-center justify-between">
 
                     {/* Columna 1 - Misión */}
@@ -59,9 +62,9 @@ const MisionVision = () => {
                     </div>
 
                     {/* Línea central decorativa - visible solo en desktop */}
-                    <div className="hidden md:flex flex-col items-center justify-center h-60">
+                    <div className="hidden md:flex flex-col items-center justify-center h-full">
                         <div className="w-4 h-4 bg-[#ff3636] rounded-full"></div>
-                        <div className="w-0.5 h-48 bg-[#ff3636]" ></div>
+                        <div className="w-0.5 h-48 md:max-lg:h-55 bg-[#ff3636]" ></div>
                         <div className="w-4 h-4 bg-[#ff3636] rounded-full"></div>
                     </div>
 

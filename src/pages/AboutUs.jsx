@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import HeroAbout from '../sections/Sections-AboutUs/HeroAbout';
 import MisionVision from '../sections/Sections-AboutUs/MisionVision';
-import Who from '../sections/Sections-AboutUs/Who';
+import WhoSection from '../sections/Sections-AboutUs/WhoSection';
 import ValuesSection from '../sections/Sections-AboutUs/ValuesSection';
 import NumbersSection from '../sections/Sections-AboutUs/ImpactSection';
 
@@ -13,7 +13,7 @@ const AboutUs = () => {
             <main className="flex-grow bg-white min-h-screen">
                 <HeroAbout />
                 <MisionVision />
-                <Who />
+                <WhoSection />
                 <ValuesSection /> 
                 <NumbersSection /> 
 

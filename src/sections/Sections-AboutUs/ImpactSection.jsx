@@ -1,5 +1,5 @@
 import React from 'react';
-import TitleSection from '../../components/AbourComponents/TitleSection';
+import TitleSection from '../../components/AboutComponents/TitleSection';
 import { statsData } from '../../data/DataAboutUs';
 import showcaseImage2 from '../../assets/images/showcase-2.png';
 import showcaseImage3 from '../../assets/images/showcase-3.png';
@@ -18,7 +18,7 @@ const ImpactSection = () => {
 
         {/* Main Content Section */}
         <div className="flex flex-col lg:flex-row mb-10">
-          <div className="grid grid-cols-2 gap-x-4 gap-y-5 lg:w-1/2 mb-10 ">
+          <div className="grid grid-cols-2 gap-y-5 lg:w-1/2 mb-10 ">
             {statsData.map((stat, index) => (
               <StatCard
                 key={index}
@@ -78,7 +78,7 @@ const ImpactSection = () => {
 
 const StatCard = ({ value, description }) => {
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center items-center">
       <div className="text-4xl text-[#1e3a5f] font-bold">{value}</div>
       <div className="text-[#5271a1] text-sm font-bold">{description}</div>
     </div>
