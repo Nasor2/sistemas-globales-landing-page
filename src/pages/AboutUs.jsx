@@ -4,6 +4,7 @@ import HeroAbout from '../sections/Sections-AboutUs/HeroAbout';
 import MisionVision from '../sections/Sections-AboutUs/MisionVision';
 import Who from '../sections/Sections-AboutUs/Who';
 import ValuesSection from '../sections/Sections-AboutUs/ValuesSection';
+import NumbersSection from '../sections/Sections-AboutUs/ImpactSection';
 
 const AboutUs = () => {
     return (
@@ -14,6 +15,7 @@ const AboutUs = () => {
                 <MisionVision />
                 <Who />
                 <ValuesSection /> 
+                <NumbersSection /> 
 
             </main>
         </div>

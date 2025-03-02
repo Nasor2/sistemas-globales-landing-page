@@ -33,3 +33,10 @@ export const values = [
     icon: Star
   }
 ];
+
+export const statsData = [
+  { value: '1.2 M', description: 'Lorem ipsum dolor sit.' },
+  { value: '+5.000', description: 'Lorem ipsum dolor sit.' },
+  { value: '99%', description: 'Lorem ipsum dolor sit.' },
+  { value: '100', description: 'Lorem ipsum dolor sit.' },
+];

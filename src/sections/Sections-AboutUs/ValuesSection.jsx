@@ -1,27 +1,18 @@
 import React from 'react';
-import { values } from '../../data/valuesData'
+import { values } from '../../data/DataAboutUs'
+import TitleSection from '../../components/AbourComponents/TitleSection';
+
+const textSegments = [
+    { text: 'Valores ', color: 'text-azul-primario'},
+    { text: 'Cooporativos', color: 'text-blue-400'},
+];
 
 const valuesSection = () => {
     return (
         <div className="flex justify-center w-full bg-white py-8">
             {/* Container with limited width */}
             <div className="w-full max-w-5xl px-4 sm:px-6">
-                {/* Title Section */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
-                    <div className="flex items-center gap-2">
-                        <div className="text-[#d32f2f] text-4xl font-medium font-['Poppins'] [text-shadow:_0px_0px_45px_rgb(255_49_49_/_1.00)]">✦</div>
-                        <div>
-                            <span className="text-[#4f8cdd] text-3xl sm:text-4xl md:text-5xl font-bold font-['Poppins']">Valores</span>
-                            <span className="text-[#1e3a5f] text-3xl sm:text-4xl md:text-5xl font-bold font-['Poppins']"> Coorporativos.</span>
-                        </div>
-                    </div>
-
-                    {/* Title decoration  */}
-                    <div className="relative w-full sm:w-auto flex-grow h-5">
-                        <div className="absolute left-0 right-0 h-4 border-b-3 border-[#d32f2f]"></div>
-                        <div className="absolute right-25 top-1.5 w-4 h-4 bg-[#d32f2f] border border-[#d32f2f]"></div>
-                    </div>
-                </div>
+                <TitleSection textSegments={textSegments} />
 
                 {/* Values Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
