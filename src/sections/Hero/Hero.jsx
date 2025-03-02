@@ -3,9 +3,11 @@ import TestimonialCard from "../../components/HeroComponents/TestimonialCard";
 import { testimonials1 } from "../../data/testimonialsData";
 import { heroImages } from "../../data/imageData";
 import { ArrowRight } from "lucide-react";
+
 const Hero = () => {
   return (
-    <section className="min-h-screen w-full bg-white py-4 lg:py-6 overflow-hidden">
+    <section className="min-h-screen w-full bg-white py-4 lg:py-6 overflow-hidden pt-24 sm:pt-28">
+      {/* Agregamos pt-24 y sm:pt-28 para compensar la altura del header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
           <div className="w-full lg:w-4/12 z-10 pb-30">

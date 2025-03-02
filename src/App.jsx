@@ -9,12 +9,13 @@ import Testimonials from './sections/Testimonials/Testimonials.jsx';
 function App() {
   return (
     <Router>
-      <div className="w-full overflow-x-hidden">
-        <main className="w-full">
+      <div className="w-full overflow-x-hidden relative">
+        
+      <Header />
+        <main className="w-full pt-24 sm:pt-28">
           <Routes>
             <Route path="/" element={
               <>
-                <Header />
                 <Hero />
                 <Testimonials />
               </>
