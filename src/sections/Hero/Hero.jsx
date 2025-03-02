@@ -1,13 +1,13 @@
 import React from "react";
 import TestimonialCard from "../../components/HeroComponents/TestimonialCard";
-import { testimonials } from "../../data/testimonialsData";
+import { testimonials1 } from "../../data/testimonialsData";
 import { heroImages } from "../../data/imageData";
 import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
-    <section className="h-screen min-w-screen mx-auto bg-white py-12 lg:py-30">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+    <section className="min-h-screen w-full bg-white py-4 lg:py-6 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
           <div className="w-full lg:w-4/12 z-10 pb-30">
             <div className="mb-3">
               <span className="inline-flex items-center text-azul-primario font-medium text-lg bg-azul-primario/10 px-4 py-1 rounded-full">
@@ -32,7 +32,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col gap-4 mt-6">
-              <button className="group bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-5 w-3/4 rounded-full transition duration-300 shadow-lg shadow-red-600/20 flex items-center justify-center">
+              <button className="group bg-rojo-primario hover:bg-red-700 text-white font-medium py-3 px-5 w-3/4 rounded-full transition duration-300 shadow-lg shadow-red-600/20 flex items-center justify-center">
                 Aparta tu espacio ahora
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
@@ -42,7 +42,7 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="w-full lg:w-8/12 relative justify-between flex">
+          <div className="w-full lg:w-7/12 relative justify-between flex">
             <div className="relative justify-between">
               <div className="relative justify-between">
                 <div
@@ -60,21 +60,21 @@ const Hero = () => {
 
                   <img
                     data-layer="Rectangle 4"
-                    className="Rectangle4 w-[473px] h-[673px] rounded-[250px] object-cover object-center transition-transform duration-700 hover:scale-105 shadow-inner"
+                    className="Rectangle4 w-[473px] h-[673px] rounded-[250px] object-cover object-center transition-transform duration-700 hover:scale-105"
                     src={heroImages.mainImage.mainImage}
                   />
                 </div>
 
                 <div className="absolute -left-6 md:-left-16 top-1/7 z-20">
-                  <TestimonialCard testimonial={testimonials[0]} />
+                  <TestimonialCard testimonial={testimonials1[0]} />
                 </div>
 
                 <div className="absolute -right-6 md:-right-16 top-2/4 z-20">
-                  <TestimonialCard testimonial={testimonials[1]} />
+                  <TestimonialCard testimonial={testimonials1[1]} />
                 </div>
 
                 <div className="absolute bottom-1 right-2/5 z-20">
-                  <TestimonialCard testimonial={testimonials[2]} />
+                  <TestimonialCard testimonial={testimonials1[2]} />
                 </div>
               </div>
             </div>
