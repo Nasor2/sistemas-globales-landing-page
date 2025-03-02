@@ -11,11 +11,11 @@ function App() {
     <Router>
       <div className="w-full overflow-x-hidden relative">
         
-      <Header />
         <main className="w-full pt-24 sm:pt-28">
           <Routes>
             <Route path="/" element={
               <>
+                <Header />
                 <Hero />
                 <Testimonials />
               </>
