@@ -4,6 +4,8 @@ import Header from './components/Header.jsx';
 import Hero from './sections/Hero/Hero.jsx';
 import Footer from './components/Footer.jsx';
 import AboutUs from './pages/AboutUs';
+import ServicesTop from './sections/SGservices/ServicesTop.jsx';
+import ServicesBelow from './sections/SGservices/ServicesBelow.jsx';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
             <>
               <Header />
               <Hero />
+              <ServicesTop />
+              <ServicesBelow />
             </>
           } />
           <Route path="/about" element={<AboutUs />} />
