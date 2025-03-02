@@ -10,7 +10,7 @@ const TestimonialCard = ({ testimonial }) => {
           <img 
             src={avatar || "/api/placeholder/36/36"} 
             alt={name}
-            className="w-9 h-9 rounded-full object-cover object-center ring-2 ring-rojo-primario"
+            className="w-10 h-10 rounded-full object-cover object-center"
           />
           
         </div>

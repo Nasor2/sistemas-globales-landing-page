@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="w-full lg:w-4/12 z-10 pb-30">
             <div className="mb-3">
               <span className="inline-flex items-center text-azul-primario font-medium text-lg bg-azul-primario/10 px-4 py-1 rounded-full">
-                ✦ Alcance Masivo
+                ✦ ALCANCE MASIVO
               </span>
             </div>
 
