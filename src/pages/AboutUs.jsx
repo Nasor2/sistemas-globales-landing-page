@@ -5,6 +5,7 @@ import showcaseImage from '../assets/images/showcase-1.png';
 import { GiTargeting } from 'react-icons/gi';
 import { Lightbulb, Sparkles, Globe } from "lucide-react";
 import logo from '../assets/icons/logo.png';
+import { values } from '../data/values'
 
 const AboutUs = () => {
     return (
@@ -160,41 +161,83 @@ const AboutUs = () => {
                             <path d="M0 736L1440 736V652.397C1150.88 564.478 937.46 600.124 669 664.796C463.125 714.392 255.75 734.681 0 667.051V736Z" fill="#F8F9FA" />
                         </svg>
 
-                        {/* Contenido centrado - Cambio del orden de los elementos */}
-                        <div className="relative z-10 flex flex-col-reverse md:flex-row justify-between items-center w-full h-full max-w-[1200px] mx-auto px-4 md:px-6 py-8 md:py-0 gap-8 md:gap-0">
-                            {/* Texto */}
-                            <div className="max-w-full md:max-w-[773px] text-white mb-30 md:mb-0">
-                                <div className="relative flex items-center space-x-3">
-                                    <span className="text-[#d32f2f] text-2xl md:text-[40px] font-medium font-['Poppins'] [text-shadow:_0px_0px_45px_rgb(255_49_49_/_1.00)]">✦</span>
-                                    <h2 className="text-white text-3xl md:text-5xl font-bold font-['Poppins']">¿Quiénes somos?</h2>
+                        {/* Contenedor centrado con ancho máximo */}
+                        <div className="flex justify-center w-full h-full">
+                            {/* Contenido centrado - Cambio del orden de los elementos */}
+                            <div className="relative z-10 flex flex-col-reverse md:flex-row justify-between items-center w-full h-full max-w-[1000px] mx-auto px-4 md:px-6 py-8 md:py-0 gap-8 md:gap-0">
+                                {/* Texto */}
+                                <div className="max-w-full md:max-w-[600px] text-white mb-30 md:mb-0">
+                                    <div className="relative flex items-center space-x-3">
+                                        <span className="text-[#d32f2f] text-2xl md:text-[40px] font-medium font-['Poppins'] [text-shadow:_0px_0px_45px_rgb(255_49_49_/_1.00)]">✦</span>
+                                        <h2 className="text-white text-3xl md:text-5xl font-bold font-['Poppins']">¿Quiénes somos?</h2>
+                                    </div>
+                                    <p className="text-lg md:text-2xl text-white/90 mt-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id congue sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                    <ul className="mt-6 space-y-3 ml-4 md:ml-10">
+                                        <li className="flex items-center space-x-2 md:space-x-4">
+                                            <Lightbulb className="w-6 h-6 md:w-8 md:h-8 text-azul-primario-claro" />
+                                            <span className="text-base md:text-xl text-white/90">Lorem ipsum dolor sit amet.</span>
+                                        </li>
+                                        <li className="flex items-center space-x-2 md:space-x-4">
+                                            <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-azul-primario-claro" />
+                                            <span className="text-base md:text-xl text-white/90">Curabitur id congue sapien.</span>
+                                        </li>
+                                        <li className="flex items-center space-x-2 md:space-x-4">
+                                            <Globe className="w-6 h-6 md:w-8 md:h-8 text-azul-primario-claro" />
+                                            <span className="text-base md:text-xl text-white/90">Vestibulum dapibus augue.</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <p className="text-lg md:text-2xl text-white/90 mt-4">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id congue sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                                <ul className="mt-6 space-y-3 ml-4 md:ml-10">
-                                    <li className="flex items-center space-x-2 md:space-x-4">
-                                        <Lightbulb className="w-6 h-6 md:w-8 md:h-8  text-azul-primario-claro" />
-                                        <span className="text-base md:text-xl text-white/90">Lorem ipsum dolor sit amet.</span>
-                                    </li>
-                                    <li className="flex items-center space-x-2 md:space-x-4">
-                                        <Sparkles className="w-6 h-6 md:w-8 md:h-8  text-azul-primario-claro" />
-                                        <span className="text-base md:text-xl text-white/90">Curabitur id congue sapien.</span>
-                                    </li>
-                                    <li className="flex items-center space-x-2 md:space-x-4">
-                                        <Globe className="w-6 h-6 md:w-8 md:h-8 text-azul-primario-claro" />
-                                        <span className="text-base md:text-xl text-white/90">Vestibulum dapibus augue.</span>
-                                    </li>
-                                </ul>
+
+                                {/* Imagen - Reducida de tamaño para escritorio */}
+                                <div className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px] rounded-full border-2 border-[#d32f2f] relative flex-shrink-0 mt-20 md:mt-0">
+                                    <img
+                                        src={logo}
+                                        alt="Imagen"
+                                        className="absolute inset-0 w-[180px] h-[180px] sm:w-[230px] sm:h-[230px] md:w-[240px] md:h-[240px] lg:w-[280px] lg:h-[280px] rounded-full object-cover m-auto"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex justify-center w-full bg-white py-8">
+                    {/* Container with limited width */}
+                    <div className="w-full max-w-5xl px-4 sm:px-6">
+                        {/* Title Section */}
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
+                            <div className="flex items-center gap-2">
+                                <div className="text-[#d32f2f] text-4xl font-medium font-['Poppins'] [text-shadow:_0px_0px_45px_rgb(255_49_49_/_1.00)]">✦</div>
+                                <div>
+                                    <span className="text-[#4f8cdd] text-3xl sm:text-4xl md:text-5xl font-bold font-['Poppins']">Valores</span>
+                                    <span className="text-[#1e3a5f] text-3xl sm:text-4xl md:text-5xl font-bold font-['Poppins']"> Coorporativos.</span>
+                                </div>
                             </div>
 
-                            {/* Imagen */}
-                            <div className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[378px] lg:h-[378px] rounded-full border-2 border-[#d32f2f] relative flex-shrink-0 mt-20 md:mt-0">
-                                <img
-                                    src={logo}
-                                    alt="Imagen"
-                                    className="absolute inset-0 w-[180px] h-[180px] sm:w-[230px] sm:h-[230px] md:w-[280px] md:h-[280px] lg:w-[338px] lg:h-[344px] rounded-full object-cover m-auto"
-                                />
+                            {/* Title decoration  */}
+                            <div className="relative w-full sm:w-auto flex-grow h-5">
+                                <div className="absolute left-0 right-0 h-4 border-b-3 border-[#d32f2f]"></div>
+                                <div className="absolute right-25 top-1.5 w-4 h-4 bg-[#d32f2f] border border-[#d32f2f]"></div>
                             </div>
+                        </div>
+
+                        {/* Values Grid */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
+                            {values.map((value, index) => (
+                                <div key={index} className="flex flex-col">
+                                    <div className="flex items-center gap-2 p-2.5">
+                                        <div className="w-10 h-10 rounded-full bg-gradient-to-b from-blue-400/20 to-blue-500/20 absolute blur-md"></div>
+                                        <value.icon className="w-[38px] h-[38px] text-azul-primario-oscuro" />
+                                        <div className="text-[#1e3a5f] text-xl font-bold font-['Poppins']">{value.title}</div>
+                                    </div>
+                                    <div className="flex gap-4 pl-[30px] py-2.5">
+                                        <div className="min-w-[2px] h-12 bg-[#ff3131]"></div>
+                                        <div className="text-[#1e3a5f] text-sm font-normal font-['Poppins']">{value.description}</div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
