@@ -59,8 +59,8 @@ const ServicesBelow = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-red-500">Lorem</span>{" "}
-            <span className="text-azul-primario">Ipsum</span>
+            <span className="text-red-500">Nuestro</span>{" "}
+            <span className="text-azul-primario">Proceso</span>
           </h2>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
             Lorem ipsum dolor sit amet consectetur adipiscing elit.
