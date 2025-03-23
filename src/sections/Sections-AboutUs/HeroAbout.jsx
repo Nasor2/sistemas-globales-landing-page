@@ -1,61 +1,153 @@
-import React from 'react';
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import showcaseImage from '../../assets/images/showcase-1.png';
+import React, { useEffect, useRef } from "react";
+import main from "../../assets/images/main-img-bg.jpeg";
+import { UsersRound } from 'lucide-react';
 
 const HeroAbout = () => {
-    return (
-        <section className="w-full relative">
-            <div className="w-full h-[400px] sm:h-[450px] md:h-[500px] min-h-screen flex flex-col relative">
-                {/* Imagen de fondo y gradiente */}
-                <div className="w-full h-full absolute top-0 left-0">
-                    <div className="w-full h-4/12 absolute top-0 left-0 bg-black" />
-                    <img
-                        className="w-full h-full object-cover opacity-90"
-                        src={showcaseImage}
-                        alt="Publicidad"
-                    />
-                    <div className="w-full h-full absolute top-0 left-0 opacity-90 bg-gradient-to-t from-azul-primario to-azul-primario-claro" />
-                </div>
+  const imageRef = useRef(null);
+  const headingRef = useRef(null);
+  const textRef = useRef(null);
 
-                {/* Contenido centrado */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-                        <span className="text-blanco-arena">Transformamos Espacios en </span>
-                        <span className="text-rojo-primario">Oportunidades</span>
-                        <span className="text-blanco-arena"> Publicitarias.</span>
-                    </h1>
-                    <p className="text-sm md:text-base w-full md:w-4/5 lg:w-3/5 text-blanco-arena/85 mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. id sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id congue sapien.
-                    </p>
-                    <div className="mt-8 md:mt-12 text-blanco-arena text-base font-semibold">
-                        Find us on
-                    </div>
-                    <SocialIcons />
-                </div>
+  useEffect(() => {
+    // Simple fade-in animation on load
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100");
+            entry.target.classList.remove("opacity-0", "translate-y-4");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-                {/* Ola inferior */}
-                <div data-svg-wrapper className="absolute bottom-0 left-0 w-full">
-                    <svg width="100%" height="100%" viewBox="0 0 1440 110" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 53.6386L0 110L1450 110V9.30096C1413.15 19.3208 1327.54 42.5166 1279.86 55.1416C1220.25 70.9228 1145.48 79.9406 1034.94 91.2129C924.402 102.485 734.753 53.6386 722.833 51.3841C710.912 49.1297 610.127 13.0584 417.227 4.79205C262.907 -1.82102 74.7758 34.601 0 53.6386Z" fill="white" />
-                        <path opacity="0.6" d="M0 50.3997L0 94L1450 94V16.1007C1413.15 23.8519 1327.54 41.7959 1279.86 51.5623C1220.25 63.7704 1145.48 70.7465 1034.94 79.4666C924.402 88.1866 734.753 50.3997 722.833 48.6557C710.912 46.9116 610.127 19.0074 417.227 12.6127C262.907 7.49695 74.7758 35.6724 0 50.3997Z" fill="white" />
-                        <path opacity="0.15" d="M1450 38.3997V82L0.00012207 82V4.10075C36.8461 11.8519 122.459 29.7959 170.142 39.5623C229.746 51.7704 304.522 58.7465 415.06 67.4666C525.598 76.1866 715.247 38.3997 727.167 36.6557C739.088 34.9116 839.873 7.00744 1032.77 0.612724C1187.09 -4.50305 1375.22 23.6725 1450 38.3997Z" fill="white" />
-                        <path opacity="0.2" d="M1450 61.3997V105L0 105V27.1007C36.8461 34.8519 122.459 52.7959 170.142 62.5623C229.746 74.7704 304.522 81.7465 415.06 90.4666C525.598 99.1866 715.247 61.3997 727.167 59.6557C739.088 57.9116 839.873 30.0074 1032.77 23.6127C1187.09 18.4969 1375.22 46.6724 1450 61.3997Z" fill="white" />
-                    </svg>
-                </div>
+    if (headingRef.current) observer.observe(headingRef.current);
+    if (textRef.current) observer.observe(textRef.current);
+    if (imageRef.current) observer.observe(imageRef.current);
+
+    return () => {
+      if (headingRef.current) observer.unobserve(headingRef.current);
+      if (textRef.current) observer.unobserve(textRef.current);
+      if (imageRef.current) observer.unobserve(imageRef.current);
+    };
+  }, []);
+
+  return (
+    <section className="relative bg-gradient-to-br  overflow-hidden min-h-screen">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-16">
+        {/* Content grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+          {/* Left column - Heading */}
+          <div>
+            <div
+              ref={headingRef}
+              className="transform transition duration-1000 ease-out opacity-0 translate-y-4"
+            >
+              <span className="bg-green-100 text-green-600 text-lg font-medium px-4 py-2 rounded-full tracking-wide inline-flex items-center">
+              <UsersRound className="mr-2 h-5 w-5" />Conocenos
+              </span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-azul-primario leading-tight mb-8">
+                Donde Todas las {" "}
+                <span className="relative inline-block">
+                  <span className="relative z-10">Marcas</span>
+                  <span className="absolute bottom-2 left-0 w-full h-3 bg-rojo-primario-claro opacity-50"></span>
+                </span>{" "} 
+                Brillan
+              </h1>
             </div>
-        </section>
-    );
-};
+          </div>
 
-const SocialIcons = () => {
-    return (
-        <div className="mt-4 space-x-4 md:space-x-6">
-            <FaFacebook className="inline-block text-xl md:text-2xl cursor-pointer text-blanco-arena" />
-            <FaInstagram className="inline-block text-xl md:text-2xl cursor-pointer text-blanco-arena" />
-            <FaTwitter className="inline-block text-xl md:text-2xl cursor-pointer text-blanco-arena" />
-            <FaLinkedin className="inline-block text-xl md:text-2xl cursor-pointer text-blanco-arena" />
+          {/* Right column - Description and CTA */}
+          <div className="flex flex-col justify-center">
+            <div
+              ref={textRef}
+              className="transform transition duration-1000 delay-300 ease-out opacity-0 translate-y-4"
+            >
+              <p className="text-negro-suave text-xl mb-8 leading-relaxed">
+              Facilitamos espacios publicitarios digitales de alto impacto en los entornos urbanos más transitados. Nuestra red de pantallas LED permite a las marcas transmitir mensajes impactantes que captan la atención.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <a
+                  href="#"
+                  className="px-8 py-4 bg-rojo-primario text-white font-medium rounded-lg hover:bg-red-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
+                >
+                  Cotiza ahora
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="px-8 py-4 bg-white text-azul-primario font-medium rounded-lg border border-azul-primario-oscuro hover:bg-azul-primario-oscuro hover:text-white transition flex items-center justify-center"
+                >
+                  Ver ubicaciones
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-    );
+
+        {/* Team image section */}
+        <div
+          ref={imageRef}
+          className="relative rounded-2xl overflow-hidden shadow-2xl transform transition duration-1000 delay-500 ease-out opacity-0 translate-y-4"
+        >
+          {/* Image overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent z-10"></div>
+
+          {/* Feature badges */}
+          <div className="absolute bottom-8 right-8 z-20 flex flex-col gap-4">
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-medium">Puntos de alto tráfico</h3>
+                  <p className="text-sm text-negro-suave">
+                  Presencia en puntos clave
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Main image using the imported image */}
+          <div className="relative z-0 h-96 lg:h-[36rem] w-full">
+            <img
+              src={main}
+              alt="Team collaborating around a table"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default HeroAbout;
