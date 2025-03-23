@@ -1,9 +1,11 @@
 import mainImage from "../assets/images/main-img-bg.jpeg";
-import showcase1 from "../assets/images/showcase-1.png"
+import showcase1 from "../assets/images/showcase-1.png";
 import showcase2 from "../assets/images/showcase-2.png";
 import showcase3 from "../assets/images/showcase-3.png";
+import mainGif from "../assets/gifs/main-video-showcase.gif";
+
 export const heroImages = {
-  mainImage: {mainImage},
+  mainImage: {mainImage: mainGif}, // Replace with the GIF
   showcaseImages: [
     showcase1,
     showcase2,
