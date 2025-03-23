@@ -7,7 +7,7 @@ import AboutUs from './pages/AboutUs';
 import Testimonials from './sections/Testimonials/Testimonials.jsx';
 import Features from './sections/Features/Features.jsx';
 import PricingContact from './sections/Pricing/PricingContact.jsx';
-import CTA from './sections/CTA/Cta.jsx';
+import CTA from './sections/CTA/CTA.jsx';
 import FAQ from './sections/FAQs/FAQ.jsx';
 import Contact from './sections/Contact/Contact.jsx';
 import ContactUs from './pages/ContactUs.jsx';
