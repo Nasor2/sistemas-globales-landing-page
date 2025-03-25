@@ -67,13 +67,6 @@ const Header = () => {
                 Ubicaciones
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </Link>
-              <Link
-                to="/contacto"
-                className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-base transition duration-300 relative group"
-              >
-                Contacto
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              </Link>
             </div>
             <Link
               to="/contacto"
