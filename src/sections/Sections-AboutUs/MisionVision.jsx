@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../../assets/images/aboutUs1.png";
-import img2 from "../../assets/images/aboutUs2.png";
-import { Target } from "lucide-react";
+import img2 from "../../assets/images/aboutUs1.png";
+import img1 from "../../assets/images/aboutUs2.png";
+import { Target, Award, Compass } from "lucide-react";
 import { motion } from "framer-motion";
 
 const MissionVision = () => {
@@ -27,11 +27,11 @@ const MissionVision = () => {
   return (
     <div 
       id="mission-vision-section" 
-      className="max-w-5xl mx-auto px-8 py-8"
+      className="max-w-5xl mx-auto px-8"
     >
       {/* Header with animated underline */}
       <motion.div 
-        className="text-center mb-16"
+        className="text-center mb-8"
         initial={{ opacity: 0, y: 30 }}
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6 }}
@@ -45,7 +45,7 @@ const MissionVision = () => {
           <Target className="mr-2 h-5 w-5" /> Misión y Visión
         </motion.span>
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold text-azul-primario mb-6"
+          className="text-5xl md:text-6xl font-bold text-azul-primario mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -62,19 +62,84 @@ const MissionVision = () => {
         </motion.p>
       </motion.div>
 
-      {/* Vision Section with improved spacing and hover effects */}
+      {/* Mission Section */}
       <motion.div 
         className="flex flex-col md:flex-row items-center mb-8 gap-16"
         initial={{ opacity: 0, x: -30 }}
         animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
         transition={{ duration: 0.7, delay: 0.5 }}
       >
-        {/* Rounded Image with subtle shadow */}
+        {/* Mission Text with enhanced card-like styling */}
         <motion.div 
-          className="w-80 h-128 flex-shrink-0 transform transition-transform duration-500 hover:rotate-2"
-          whileHover={{ rotate: 2, transition: { duration: 0.3 } }}
+          className="p-8 border-l-4 border-red-700 bg-white rounded-3xl shadow-2xl"
+          initial={{ opacity: 0, x: -20 }}
+          animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          whileHover={{ 
+            x: -8, 
+            scale: 1.02,
+            transition: { duration: 0.3 } 
+          }}
         >
-          <div className="bg-azul-primario rounded-full overflow-hidden w-80 h-128 pt-8 shadow-lg">
+          <div className="flex items-center mb-6">
+            <Award className="h-10 w-10 text-rojo-primario mr-4" />
+            <motion.h2 
+              className="text-3xl font-bold text-red-700"
+              initial={{ opacity: 0, y: 10 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            >
+              Nuestra Misión
+            </motion.h2>
+          </div>
+          <motion.p 
+            className="text-negro-suave text-lg leading-relaxed max-w-lg"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+          >
+            Promover soluciones innovadoras y efectivas en publicidad digital
+            para maximizar el impacto de las marcas que confian en nosotros.
+          </motion.p>
+        </motion.div>
+
+        {/* Rounded Image - Left Side with subtle shadow */}
+        <motion.div 
+          className="w-80 h-128 flex-shrink-0"
+          whileHover={{ 
+            rotate: -2, 
+            scale: 1.05,
+            transition: { duration: 0.3 } 
+          }}
+        >
+          <div className="bg-red-700 rounded-full overflow-hidden w-80 h-128 pt-8 shadow-2xl">
+            <motion.img
+              src={img2}
+              alt="Young woman with books"
+              className="w-full h-full object-cover"
+              whileHover={{ scale: 1.05, transition: { duration: 0.7 } }}
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Vision Section */}
+      <motion.div 
+        className="flex flex-col-reverse md:flex-row items-center gap-16"
+        initial={{ opacity: 0, x: 30 }}
+        animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+        transition={{ duration: 0.7, delay: 1.0 }}
+      >
+        {/* Rounded Image - Right Side with subtle shadow */}
+        <motion.div 
+          className="w-80 h-128 flex-shrink-0 ml-auto"
+          whileHover={{ 
+            rotate: 2, 
+            scale: 1.05,
+            transition: { duration: 0.3 } 
+          }}
+        >
+          <div className="bg-azul-primario rounded-full overflow-hidden w-80 h-128 pt-8 shadow-2xl">
             <motion.img
               src={img1}
               alt="Young man"
@@ -84,82 +149,39 @@ const MissionVision = () => {
           </div>
         </motion.div>
 
-        {/* Vision Text with animated border */}
+        {/* Vision Text with enhanced card-like styling */}
         <motion.div 
-          className="ml-8 p-6 border-l-4 border-azul-primario"
+          className="p-8 border-r-4 border-azul-primario bg-white rounded-3xl shadow-2xl"
           initial={{ opacity: 0, x: 20 }}
           animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          whileHover={{ x: 8, transition: { duration: 0.3 } }}
-        >
-          <motion.h2 
-            className="text-4xl font-bold mb-8 text-azul-primario"
-            initial={{ opacity: 0, y: 10 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-          >
-            Nuestra Visión
-          </motion.h2>
-          <motion.p 
-            className="text-negro-suave text-lg leading-relaxed max-w-lg"
-            initial={{ opacity: 0, y: 10 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-            transition={{ duration: 0.5, delay: 0.9 }}
-          >
-            Para 2030, ser la empresa lider en publicidad en Cartagena por la
-            calidad de los servicios, la innovación tecnológica y compromiso con
-            el éxito de las marcas que nos confian su estrategia
-          </motion.p>
-        </motion.div>
-      </motion.div>
-
-      {/* Mission Section with improved layout */}
-      <motion.div 
-        className="flex flex-col-reverse md:flex-row items-center gap-16"
-        initial={{ opacity: 0, x: 30 }}
-        animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-        transition={{ duration: 0.7, delay: 1.0 }}
-      >
-        {/* Mission Text with animated border */}
-        <motion.div 
-          className="p-6 border-r-4 border-red-700"
-          initial={{ opacity: 0, x: -20 }}
-          animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ duration: 0.6, delay: 1.1 }}
-          whileHover={{ x: -8, transition: { duration: 0.3 } }}
+          whileHover={{ 
+            x: 8, 
+            scale: 1.02,
+            transition: { duration: 0.3 } 
+          }}
         >
-          <motion.h2 
-            className="text-4xl font-bold mb-8 text-red-700"
-            initial={{ opacity: 0, y: 10 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
-          >
-            Nuestra Misión
-          </motion.h2>
+          <div className="flex items-center mb-6">
+            <Compass className="h-10 w-10 text-azul-primario mr-4" />
+            <motion.h2 
+              className="text-3xl font-bold text-azul-primario"
+              initial={{ opacity: 0, y: 10 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+            >
+              Nuestra Visión
+            </motion.h2>
+          </div>
           <motion.p 
             className="text-negro-suave text-lg leading-relaxed max-w-lg"
             initial={{ opacity: 0, y: 10 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.5, delay: 1.3 }}
           >
-            Promover soluciones innovadoras y efectivas en publicidad digital
-            para maximizar el impacto de las marcas que confian en nosotros.
+            Para 2030, ser la empresa lider en publicidad en Cartagena por la
+            calidad de los servicios, la innovación tecnológica y compromiso con
+            el éxito de las marcas que nos confian su estrategia
           </motion.p>
-        </motion.div>
-
-        {/* Rounded Image - Right Side with subtle shadow */}
-        <motion.div 
-          className="w-80 h-128 flex-shrink-0 ml-auto"
-          whileHover={{ rotate: -2, transition: { duration: 0.3 } }}
-        >
-          <div className="bg-red-700 rounded-full overflow-hidden w-80 h-128 pt-8 shadow-lg">
-            <motion.img
-              src={img2}
-              alt="Young woman with books"
-              className="w-full h-full object-cover"
-              whileHover={{ scale: 1.05, transition: { duration: 0.7 } }}
-            />
-          </div>
         </motion.div>
       </motion.div>
     </div>

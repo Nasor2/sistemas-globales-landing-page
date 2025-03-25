@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestimonialCard from "../../components/HeroComponents/TestimonialCard";
-import { testimonials1 } from "../../data/testimonialsData";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { heroImages } from "../../data/imageData";
-import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
-  // Variantes para las animaciones
+  // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -39,20 +37,6 @@ const Hero = () => {
     }
   };
   
-  const testimonialAnimation = {
-    hidden: { opacity: 0, scale: 0.6 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: { 
-        duration: 0.5,
-        type: "spring",
-        bounce: 0.4
-      }
-    }
-  };
-
-  // Nueva animación para botones
   const buttonAnimation = {
     hover: { 
       scale: 1.03, 
@@ -64,11 +48,22 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen w-full bg-white py-4 lg:py-6 overflow-hidden pt-24 sm:pt-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen w-full bg-white py-4 lg:py-6 overflow-hidden pt-24 sm:pt-28 relative">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-azul-primario/10"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
-          
-          {/* Contenido Izquierdo */}
+          {/* Left Content */}
           <motion.div 
             className="w-full lg:w-4/12 z-10 pb-30 text-center lg:text-left mx-auto lg:mx-0"
             initial="hidden"
@@ -86,12 +81,12 @@ const Hero = () => {
               variants={fadeIn}
             >
               Conquista la ciudad y{" "}
-              <span className="text-rojo-primario">dispara tus ventas</span> con
+              <span className="text-rojo-primario">posiciona tu marca</span> con
               pantallas digitales
             </motion.h1>
 
             <motion.p 
-              className="text-lg mb-2 w-3/4 text-center lg:text-left mx-auto lg:mx-0"
+              className="text-lg mb-6 w-full lg:w-3/4 text-center lg:text-left mx-auto lg:mx-0 text-gray-700"
               variants={fadeIn}
             >
               Publicidad exterior digital de{" "}
@@ -103,8 +98,28 @@ const Hero = () => {
               en los momentos clave.
             </motion.p>
 
+            {/* Added benefits list */}
             <motion.div 
-              className="flex flex-col items-center lg:items-start gap-6 mt-8"
+              className="mb-8 space-y-3 w-full lg:w-3/4 mx-auto lg:mx-0"
+              variants={staggerContainer}
+            >
+              {[
+                "Cobertura en puntos estratégicos",
+                "Impacto visual garantizado",
+              ].map((benefit, index) => (
+                <motion.div 
+                  key={index} 
+                  className="flex items-center gap-3"
+                  variants={fadeIn}
+                >
+                  <CheckCircle className="text-green-500 w-6 h-6" />
+                  <span className="text-gray-700">{benefit}</span>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div 
+              className="flex flex-col items-center lg:items-start gap-6"
               variants={staggerContainer}
             >
               <motion.div variants={fadeIn} className="w-4/5 sm:w-3/4">
@@ -143,7 +158,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
           
-          {/* Contenido Derecho - Imágenes */}
+          {/* Right Content - Images */}
           <motion.div 
             className="w-full lg:w-7/12 relative justify-between hidden lg:flex"
             initial="hidden"
@@ -151,55 +166,21 @@ const Hero = () => {
             variants={staggerContainer}
           >
             <div className="relative justify-between">
-              <div className="relative justify-between">
-                <motion.div
-                  className="flex items-center justify-center relative rounded-[265.50px] overflow-hidden border-2 border-gray-200 shadow-2xl bg-gradient-to-b from-white to-gray-50"
-                  style={{
-                    height: "742px",
-                    width: "531px",
-                  }}
-                  variants={imageAnimation}
-                >
-                  <img
-                    data-layer="Rectangle 4"
-                    className="Rectangle4 w-[473px] h-[673px] rounded-[250px] object-cover object-center transition-transform duration-700 hover:scale-105"
-                    src={heroImages.mainImage.mainImage}
-                  />
-                </motion.div>
-
-                <motion.div 
-                  className="absolute -left-6 md:-left-16 top-1/7 z-20"
-                  variants={testimonialAnimation}
-                  custom={1}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: 0.4 }}
-                >
-                  <TestimonialCard testimonial={testimonials1[0]} />
-                </motion.div>
-
-                <motion.div 
-                  className="absolute -right-6 md:-right-16 top-2/4 z-20"
-                  variants={testimonialAnimation}
-                  custom={2}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: 0.6 }}
-                >
-                  <TestimonialCard testimonial={testimonials1[1]} />
-                </motion.div>
-
-                <motion.div 
-                  className="absolute bottom-1 right-2/5 z-20"
-                  variants={testimonialAnimation}
-                  custom={3}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: 0.8 }}
-                >
-                  <TestimonialCard testimonial={testimonials1[2]} />
-                </motion.div>
-              </div>
+              <motion.div
+                className="flex items-center justify-center relative rounded-[265.50px] overflow-hidden border-2 border-gray-200 shadow-2xl bg-gradient-to-b from-white to-gray-50 group"
+                style={{
+                  height: "742px",
+                  width: "531px",
+                }}
+                variants={imageAnimation}
+              >
+                <div className="absolute inset-0 bg-azul-primario/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <img
+                  className="Rectangle4 w-[473px] h-[673px] rounded-[250px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  src={heroImages.mainImage.mainImage}
+                  alt="Digital Billboard Main Image"
+                />
+              </motion.div>
             </div>
             
             <motion.div 

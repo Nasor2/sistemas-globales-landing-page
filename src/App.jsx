@@ -11,6 +11,7 @@ import CTA from './sections/CTA/CTA.jsx';
 import FAQ from './sections/FAQs/FAQ.jsx';
 import Contact from './sections/Contact/Contact.jsx';
 import ContactUs from './pages/ContactUs.jsx';
+import CompanyLogos from './sections/Testimonials/CompanyLogos.jsx';
 
 function App() {
   return (
@@ -22,11 +23,8 @@ function App() {
             <Route path="/" element={
               <>
                 <Hero />
-                <Features />
                 <PricingContact />
-                <Testimonials />
                 <Contact />
-                <FAQ />
                 <CTA />
               </>
             } />
