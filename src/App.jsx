@@ -12,27 +12,27 @@ import FAQ from './sections/FAQs/FAQ.jsx';
 import Contact from './sections/Contact/Contact.jsx';
 import ContactUs from './pages/ContactUs.jsx';
 import CompanyLogos from './sections/Testimonials/CompanyLogos.jsx';
+import LocationsSection from './sections/Location/LocationSection.jsx';
 
 function App() {
   return (
     <Router>
-      <div className="w-full overflow-x-hidden relative">        
+      <div className="w-full relative">        
       <Header />
         <main className="w-full pt-24 sm:pt-28">
           <Routes>
             <Route path="/" element={
               <>
                 <Hero />
+                <LocationsSection />
                 <PricingContact />
                 <Contact />
                 <CTA />
               </>
             } />
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/contacto" element={<ContactUs />} />
           </Routes>
         </main>
-        <Footer />
       </div>
     </Router>
   );
