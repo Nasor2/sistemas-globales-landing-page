@@ -200,7 +200,7 @@ const ContactUs = () => {
                     </p>
                   </div>
                   <motion.a
-                    href="https://wa.me/34123456789"
+                    href="https://wa.me/573002433252"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 hover:bg-green-600 text-white p-3 md:p-4 rounded-2xl shadow-md transition-colors duration-300"
@@ -231,7 +231,7 @@ const ContactUs = () => {
                       Email
                     </p>
                     <p className="text-rojo-primario font-bold text-base md:text-lg">
-                      contact@lumina.com
+                    Pantallasctg@gmail.com
                     </p>
                   </div>
                   <motion.a
@@ -247,29 +247,7 @@ const ContactUs = () => {
 
               {/* Location and Hours with improved styling */}
               <div className="space-y-5 md:space-y-6 border-t border-indigo-100 pt-6">
-                <motion.div
-                  className="flex items-start p-3 rounded-2xl bg-blue-50 hover:bg-blue-100 transition-all"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={
-                    contactSectionVisible
-                      ? { opacity: 1, y: 0 }
-                      : { opacity: 0, y: 20 }
-                  }
-                  transition={{ duration: 0.01, delay: 0.5 }}
-                  whileHover={{ scale: 1.01 }}
-                >
-                  <div className="bg-indigo-100 p-3 rounded-xl mr-4 shadow-md">
-                    <MapPin className="h-5 w-5 text-indigo-600" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-indigo-600 mb-1 text-sm md:text-base">
-                      Ubicación
-                    </p>
-                    <p className="text-gray-700 text-sm md:text-base">
-                      Calle Principal 123, Madrid, España 28001
-                    </p>
-                  </div>
-                </motion.div>
+                
 
                 <motion.div
                   className="flex items-start p-3 rounded-2xl bg-blue-50 hover:bg-blue-100 transition-all"
@@ -290,10 +268,7 @@ const ContactUs = () => {
                       Horario
                     </p>
                     <p className="text-gray-700 text-sm md:text-base">
-                      Lunes a Viernes: 9:00 - 18:00
-                    </p>
-                    <p className="text-gray-700 text-sm md:text-base">
-                      Sábado: 10:00 - 14:00
+                      Lunes a Sabado: 8:00 - 17:00
                     </p>
                   </div>
                 </motion.div>
@@ -507,97 +482,7 @@ const ContactUs = () => {
           </motion.div>
         </div>
 
-        {/* Help & Support Section */}
-        <div id="help-section" className="mt-16 md:mt-20 px-4">
-          <motion.h2
-            className="text-3xl md:text-5xl font-bold text-center mb-4 text-azul-primario"
-            initial={{ opacity: 0, y: 30 }}
-            animate={
-              helpSectionVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-            }
-            transition={{ duration: 0.6 }}
-          >
-            Áreas de Asistencia
-          </motion.h2>
-          <motion.p
-            className="text-gray-600 text-center mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base"
-            initial={{ opacity: 0, y: 30 }}
-            animate={
-              helpSectionVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-            }
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Nuestro equipo especializado está preparado para atenderte en todas
-            estas áreas. Selecciona el departamento que mejor se adapte a tu
-            consulta.
-          </motion.p>
-
-          <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
-            {/* Card 1 */}
-            <motion.div
-              className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-50 hover:shadow-xl transition-all hover:-translate-y-1 duration-300"
-              initial={{ opacity: 0, x: -30 }}
-              animate={
-                helpSectionVisible
-                  ? { opacity: 1, x: 0 }
-                  : { opacity: 0, x: -30 }
-              }
-              transition={{ duration: 0.01, delay: 0.2 }}
-              whileHover={{ scale: 1.03 }}
-            >
-              <div className="bg-pink-400 p-3 md:p-4 rounded-xl mb-4 md:mb-6 inline-block">
-                <ShoppingBag className="h-5 w-5 md:h-7 md:w-7 text-white" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-pink-600">
-                Ventas y Presupuestos
-              </h3>
-              <p className="text-negro-suave mb-4 md:mb-5 text-sm md:text-base">
-                Solicita información personalizada sobre nuestras soluciones
-                adaptadas a tus necesidades.
-              </p>
-              <motion.a
-                href="mailto:ventas@lumina.com"
-                className="text-indigo-600 font-medium flex items-center hover:text-indigo-800 transition-colors text-sm md:text-base"
-                whileHover={{ x: 5 }}
-              >
-                ventas@lumina.com
-                <ChevronRight className="ml-1 h-3 w-3 md:h-4 md:w-4" />
-              </motion.a>
-            </motion.div>
-
-            {/* Card 2 */}
-            <motion.div
-              className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-indigo-50 hover:shadow-xl transition-all hover:-translate-y-1 duration-300"
-              initial={{ opacity: 0, x: 30 }}
-              animate={
-                helpSectionVisible
-                  ? { opacity: 1, x: 0 }
-                  : { opacity: 0, x: 30 }
-              }
-              transition={{ duration: 0.01, delay: 0.3 }}
-              whileHover={{ scale: 1.03 }}
-            >
-              <div className="bg-green-500 p-3 md:p-4 rounded-xl mb-4 md:mb-6 inline-block">
-                <HelpCircle className="h-5 w-5 md:h-7 md:w-7 text-white" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-green-600">
-                Soporte Técnico
-              </h3>
-              <p className="text-negro-suave mb-4 md:mb-5 text-sm md:text-base">
-                Asistencia especializada para resolver cualquier incidencia con
-                nuestros sistemas de publicidad exterior.
-              </p>
-              <motion.a
-                href="mailto:soporte@lumina.com"
-                className="text-indigo-600 font-medium flex items-center hover:text-indigo-800 transition-colors text-sm md:text-base"
-                whileHover={{ x: 5 }}
-              >
-                soporte@lumina.com
-                <ChevronRight className="ml-1 h-3 w-3 md:h-4 md:w-4" />
-              </motion.a>
-            </motion.div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
