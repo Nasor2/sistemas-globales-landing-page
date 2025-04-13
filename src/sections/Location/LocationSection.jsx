@@ -3,7 +3,19 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { MapPin, Maximize, X, Monitor, ChevronLeft, ChevronRight } from "lucide-react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { screens } from "../../data/locationsData";
+
+// Arreglar el ícono por defecto
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
 
 const LocationsSection = () => {
   const [selectedScreen, setSelectedScreen] = useState(null);
@@ -12,7 +24,7 @@ const LocationsSection = () => {
   const [isMapFullscreen, setIsMapFullscreen] = useState(false);
   // Estado para controlar la imagen actual en el carrusel
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+  
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -23,6 +35,8 @@ const LocationsSection = () => {
 
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
+
+  
 
   // Resetear el índice de imagen cuando se selecciona una nueva pantalla
   useEffect(() => {
