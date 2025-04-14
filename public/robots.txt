@@ -1,0 +1,14 @@
+# Permitir a todos los robots
+User-agent: *
+Allow: /
+
+# Evitar indexación de áreas privadas o administrativas (si las tienes)
+Disallow: /admin/
+Disallow: /private/
+
+# Ubicación del sitemap
+Sitemap: https://sistemasglobales.vercel.app/sitemap.xml
+
+# Reglas específicas para Google
+User-agent: Googlebot
+Allow: /
