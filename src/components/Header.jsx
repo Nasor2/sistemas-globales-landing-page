@@ -57,8 +57,7 @@ const Header = () => {
   ];
 
   const mobileNavLinks = [
-    ...navigationLinks,
-    { path: "/contacto", label: "Contacto", isHashLink: false }
+    ...navigationLinks
   ];
 
   return (
