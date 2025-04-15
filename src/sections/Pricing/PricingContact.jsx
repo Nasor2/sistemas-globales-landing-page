@@ -24,9 +24,7 @@ import fondocard from "../../assets/images/fondo-pricing-section.png";
 const PricingContact = () => {
   return (
     <div className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-48 h-48 bg-green-100 rounded-full opacity-30 blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl translate-x-1/3 translate-y-1/3"></div>
+
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="space-y-8 md:space-y-12">
