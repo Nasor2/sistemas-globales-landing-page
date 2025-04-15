@@ -74,7 +74,7 @@ const LocationsSection = () => {
   };
 
   return (
-    <section id="ubicaciones" className="relative px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b">
+    <section id="ubicaciones" className="relative pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -279,7 +279,7 @@ const LocationsSection = () => {
           )}
 
           {/* Instructions Panel - Shown when no screen is selected */}
-          {!selectedScreen && !isMobile && (
+          {!selectedScreen  && (
             <div className="md:w-1/2 bg-white rounded-2xl shadow-xl overflow-hidden flex items-center justify-center p-8">
               <div className="text-center space-y-4 max-w-md">
                 <div className="mx-auto bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center">
@@ -306,35 +306,7 @@ const LocationsSection = () => {
           )}
         </div>
 
-        {/* List of Screens for Mobile (when no screen is selected) */}
-        {isMobile && !selectedScreen && (
-          <div className="mt-8 space-y-4">
-            <h3 className="text-lg font-bold text-gray-800 mb-4">
-              Nuestras pantallas
-            </h3>
-
-            {screens.map((screen) => (
-              <div
-                key={screen.id}
-                className="bg-white rounded-xl shadow-md p-4 flex items-center cursor-pointer hover:shadow-lg transition-all duration-300"
-                onClick={() => handleScreenClick(screen)}
-              >
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center mr-4 bg-${screen.colorCode}-100`}
-                >
-                  <Monitor className={`h-5 w-5 text-${screen.colorCode}-600`} />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-medium text-gray-800">{screen.name}</h4>
-                  <p className="text-sm text-gray-600">{screen.address}</p>
-                </div>
-                <div className="ml-4">
-                  <MapPin className="h-5 w-5 text-gray-400" />
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+        
       </div>
     </section>
   );

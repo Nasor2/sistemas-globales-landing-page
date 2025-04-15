@@ -11,6 +11,7 @@ const NavLink = ({ to, children, onClick, isHashLink = false }) => {
       to={to}
       onClick={onClick}
       className="text-azul-primario-oscuro hover:text-rojo-primario font-normal text-base transition duration-300 relative group"
+      {...(isHashLink ? { smooth: true } : {})}
     >
       {children}
       <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rojo-primario transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -72,7 +73,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <HashLink to="/#hero" className="flex items-center space-x-2 sm:space-x-4">
+          <HashLink to="/#hero" smooth className="flex items-center space-x-2 sm:space-x-4">
             <img 
               src={logo} 
               alt="Sistemas Globales" 
@@ -151,18 +152,23 @@ const Header = () => {
             aria-label="Navegación móvil"
           >
             <div className="flex flex-col space-y-4 p-4">
-              {mobileNavLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="text-azul-primario hover:text-rojo-primario font-semibold text-base py-2 px-4 transition duration-300 rounded-md hover:bg-gray-50"
-                  onClick={closeMenu}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {mobileNavLinks.map((link) => {
+                const Component = link.isHashLink ? HashLink : Link;
+                return (
+                  <Component
+                    key={link.path}
+                    to={link.path}
+                    className="text-azul-primario hover:text-rojo-primario font-semibold text-base py-2 px-4 transition duration-300 rounded-md hover:bg-gray-50"
+                    onClick={closeMenu}
+                    {...(link.isHashLink ? { smooth: true } : {})} // Only add smooth prop for HashLinks
+                  >
+                    {link.label}
+                  </Component>
+                );
+              })}
               <HashLink
-                to="/#cotizar"
+                smooth
+                to="/#contacto"
                 className="bg-rojo-primario text-white py-2 px-6 rounded-full font-semibold text-base text-center hover:bg-[#c71f1f] transition duration-300 shadow-md mt-2"
                 onClick={closeMenu}
               >
